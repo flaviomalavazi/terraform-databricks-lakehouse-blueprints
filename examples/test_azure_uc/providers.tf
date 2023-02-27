@@ -3,5 +3,5 @@ provider "azurerm" {
 }
 
 provider "databricks" {
-  host = azurerm_databricks_workspace.this.workspace_url
+  host = module.databricks_workspace.workspace_url
 }

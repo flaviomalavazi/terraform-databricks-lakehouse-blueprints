@@ -68,6 +68,7 @@ resource "azurerm_databricks_workspace" "this" {
 
   custom_parameters {
     no_public_ip                                         = true
+    storage_account_sku_name                             = "Standard_LRS"
     virtual_network_id                                   = var.vnet_id
     private_subnet_name                                  = azurerm_subnet.private.name
     public_subnet_name                                   = azurerm_subnet.public.name
