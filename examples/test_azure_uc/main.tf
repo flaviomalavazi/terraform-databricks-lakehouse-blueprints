@@ -44,7 +44,7 @@ module "databricks_workspace" {
 }
 
 locals {
-  prefix                    = var.prefix
+  prefix = var.prefix
   tags = {
     Environment = "TF Demo"
     Owner       = lookup(data.external.me.result, "name")
